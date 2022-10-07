@@ -58,10 +58,11 @@ p {
   margin-right: -50%;
   transform: translate(-50%, -50%);
   border: 1px solid #aeaeae;
-  /* background: linear-gradient(170deg, rgba(103, 114, 135, 0.4) 20%, rgba(96, 105, 121, 0.2) 20%, rgba(98, 109, 129, 0.3) 35%, rgba(106, 115, 131, 0.4) 35%, rgba(110, 118, 131, 0.3) 45%, rgba(106, 114, 131, 0.2) 45%, rgba(101, 108, 123, 0.5) 75%, rgba(106, 115, 133, 0.4) 75%), linear-gradient(45deg, rgba(91, 101, 117, 0.4) 0%, rgba(86, 94, 109, 0.4) 50%, rgba(82, 95, 122, 0.4) 50%, rgba(133, 146, 173, 0.3) 100%) #4f5869; */
-background: transparent;
-} 
+  background: transparent;
+  box-shadow: 0 0 30px #d0f3ff,  0 0 30px rgba(10, 175, 230, 0);
+  cursor: pointer;
 
+} 
 
 button[data-start] {
   left: 30%;
@@ -71,10 +72,10 @@ button[data-stop] {
   left: 65%;
  } 
 /* =============Task 2================ */
-.form-control {
+input {
 background-color: #4f5869;
   color: azure;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   text-align: center;
   text-transform: uppercase;
@@ -90,6 +91,7 @@ button[data-start] {
   background-color: transparent;
   /* color: azure; */
   border: 1px solid #aeaeae;
+  
 }
 .timer {
   margin-top: 100px;
@@ -102,12 +104,17 @@ button[data-start] {
   /* background-color: rgb(50, 50, 50); */
  
 }
-.field {
 
- 
-}
 .value:not(:last-child) {
   margin-left: 30px;
 }
-.label {
+/* =============Task 3================ */
+.form button {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #aeaeae;
+  margin-left: 15px;
 }

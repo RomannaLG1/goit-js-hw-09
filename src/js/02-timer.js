@@ -1,12 +1,13 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import 'flatpickr/dist/themes/dark.css';
+import Notiflix from 'notiflix';
+
 /* <input type="text" id="datetime-picker" />
 <button type="button" data-start>Start</button> */
 
 const refs = {
-  bodyEl: document.querySelector('body'),
-  inputEl: document.querySelector('#datetime-picker'),
+   inputEl: document.querySelector('#datetime-picker'),
   buttonEl: document.querySelector('button[data-start]'),
   daySpanEl: document.querySelector('span[data-days]'),
   hoursSpanEl: document.querySelector('span[data-hours]'),
@@ -46,7 +47,8 @@ const options = {
   dateFormat: 'Y-m-d',
   onClose(selectedDates) {
     if (selectedDates[0] < Date.now()) {
-      alert('Please choose a date in the future');
+      // alert('Please choose a date in the future');
+      Notiflix.Notify.warning('Please choose a date in the future');
       return;
     }
     refs.buttonEl.removeAttribute('disabled');
@@ -62,6 +64,7 @@ const options = {
           const { days, hours, minutes, seconds } = convertMs(deltaTime);
           if (deltaTime < 0) {
             clearInterval(timerId);
+       
           } else {
             refs.daySpanEl.textContent = `${days}`;
             refs.hoursSpanEl.textContent = `${hours}`;
