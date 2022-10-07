@@ -22,9 +22,9 @@ function handleSubmit(event) {
     elements: { delay, step, amount },
   } = event.currentTarget;
 
-  delayValue = Number(delay.value);
-  stepValue = Number(step.value);
-  amountValue = Number(amount.value);
+  let delayValue = Number(delay.value);
+  let stepValue = Number(step.value);
+  let amountValue = Number(amount.value);
 
   let position = null;
 
